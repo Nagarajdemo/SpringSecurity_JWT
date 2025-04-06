@@ -37,7 +37,7 @@ public class SecurityConfig {
 //    httpSecurity.sessionManagement(session-> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
         return httpSecurity.csrf(Customizer -> Customizer.disable())
                 .authorizeHttpRequests(request -> request
-                        .requestMatchers("register","login")
+                        .requestMatchers("login")
                         .permitAll()
                         .anyRequest().authenticated())
 //                .formLogin(Customizer.withDefaults())
